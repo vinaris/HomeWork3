@@ -8,8 +8,13 @@ namespace Model
 {
     public class Jay : Gambler
     {
-        public Jay(string name) : base(name)
+        public Jay() : base("Jay")
         {
+        }
+
+        public override void FetchNewNumber(int number)
+        {
+            if (number.IsEvent()) Score++;
         }
     }
 }

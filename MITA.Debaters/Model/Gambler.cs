@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Gambler
+    public abstract class Gambler
     {
         protected Gambler(string name)
         {
             Name = name;
         }
         public string Name { get; }
-        public double Score { get; private set; }
+        public double Score { get; protected set; } = 0;
+
+        public abstract void FetchNewNumber(int number);
     }
 }
