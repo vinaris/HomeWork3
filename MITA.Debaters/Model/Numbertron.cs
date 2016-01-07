@@ -15,7 +15,6 @@ namespace Model
         {
             int number = rnd.Next();
             NewNumber?.Invoke(number);
-            Console.WriteLine(number);
         }
     }
 }
