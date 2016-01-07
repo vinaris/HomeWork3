@@ -31,7 +31,7 @@ namespace View
                         for (int i = 0; i < count; i++)
                         {
                             numbertron.Generate();
-                            Thread.Sleep(1); //Необходима для корректной рандомизации
+                            //Thread.Sleep(1); //Необходима для корректной рандомизации
                         }
                         if (jay.Score > silentBob.Score) Console.WriteLine("Jay победил!");
                         else if(jay.Score < silentBob.Score) Console.WriteLine("SilentBob победил!");

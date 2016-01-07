@@ -10,9 +10,9 @@ namespace Model
     {
         public delegate void NumbertronNumbers(int number);
         public event NumbertronNumbers NewNumber;
+        Random rnd = new Random((int)DateTime.Now.Ticks);
         public void Generate()
         {
-            Random rnd = new Random(DateTime.Now.Millisecond);
             int number = rnd.Next();
             NewNumber?.Invoke(number);
             Console.WriteLine(number);
